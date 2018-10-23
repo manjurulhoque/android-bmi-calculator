@@ -24,7 +24,7 @@
             android:padding="10dp">
 
             <LinearLayout
-                android:id="@+id/layout_left"
+                android:id="@+id/layout_one"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
@@ -32,7 +32,7 @@
                 android:weightSum="3">
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/editAgeLayout"
+                    android:id="@+id/AgeTextInputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -53,7 +53,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/editWidthLayout"
+                    android:id="@+id/WeightTextInputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -75,7 +75,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <Spinner
-                    android:id="@+id/editWeight_unit"
+                    android:id="@+id/weightSpinner"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
@@ -85,16 +85,16 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_right"
+                android:id="@+id/layout_two"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/layout_left"
+                android:layout_below="@id/layout_one"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/editHeightLayout"
+                    android:id="@+id/HeightTextInputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -103,7 +103,7 @@
 
 
                     <android.support.v7.widget.AppCompatEditText
-                        android:id="@+id/editHeight"
+                        android:id="@+id/heightAppCompatEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
@@ -116,7 +116,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/editHeightInchLayout"
+                    android:id="@+id/HeightInchTextInputLayout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -138,7 +138,7 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <Spinner
-                    android:id="@+id/editHeight_unit"
+                    android:id="@+id/heightSpinner"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
@@ -147,57 +147,17 @@
 
             </LinearLayout>
 
-            <RadioGroup
-                android:id="@+id/ediRadioGender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout_right"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:minHeight="43dp"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.AppCompatRadioButton
-                    android:id="@+id/editRadioMale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:button="@drawable/radio_male_inner"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp" />
-
-                <android.support.v7.widget.AppCompatRadioButton
-                    android:id="@+id/editRadioFemale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/radio_female_inner" />
-
-            </RadioGroup>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ediRadioGender"
+                android:layout_below="@id/layout_two"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/editCancel"
+                    android:id="@+id/btnCalculate"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_cancel"
-                    android:text="Cancel"
-                    android:textColor="#fff" />
-
-                <Button
-                    android:id="@+id/editCalculate"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_calculate"
                     android:text="Calculate"
@@ -209,12 +169,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/card">
 
             <TextView
+                android:id="@+id/resultTextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="3"
+                android:padding="10dp"
                 android:text="Result:"
                 android:textColor="#000"
                 android:textSize="20sp" />
