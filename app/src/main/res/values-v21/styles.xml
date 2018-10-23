@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InnerHintText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/indigo</item>
+        <item name="android:colorControlNormal">@color/indigo</item>
+        <item name="android:textColorHint">@color/indigo</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white_87</item>
+        <item name="android:colorControlNormal">@color/white_54</item>
+        <item name="android:textColorHint">@color/white_54</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>
